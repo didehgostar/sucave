@@ -37,3 +37,11 @@ window.addEventListener("popstate", function() {
   }
 }, false);
 }(window, location));
+window.location.href = 'https://example.org';
+let newTab = window.open(url, name, spec);
+i.e
+let newTab = window.open('https://example.com', '_blank', '');
+window.location.reload(true);
+//this forces a reload, if the browser history cache is not available
+window.location.reload(true);
+//this forces a reload, if the browser history cache is not available
