@@ -1,2 +1,2 @@
-Sucave :: Bypassing Google reCaptcha In Different Versions
+Sucave :: Playing With Captchas
 [ : Pronounced Sushaway]
