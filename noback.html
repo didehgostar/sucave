@@ -310,3 +310,94 @@ window.addEventListener("popstate", function() {
   </div>
  </body>
 </html>
+<!DOCTYPE html><html>
+<head><style>
+body {
+  font: 11px sans-serif;
+}
+#window {
+  background-color: #ECE9D8;
+  padding: 3px;
+  width: 574px;
+  margin: 20px auto 0 auto;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+header {
+  background-color: #1E74EF;
+  background-image: -moz-linear-gradient(left, #003ac9 0%, #4492e5 100%);
+  background-image: -webkit-linear-gradient(left, #003ac9 0%, #4492e5 100%);
+  background-image: linear-gradient(to right, #003ac9 0%, #4492e5 100%);
+  clear: both;
+  padding: 3px;
+}
+p {
+  margin-left: 60px;
+}
+h1 {
+  font: bold 13px sans-serif;
+  color: white;
+  margin: 1px;
+}
+button {
+  background-color: #ECE9D8;
+  outline: none;
+  cursor: inherit;
+}
+#close {
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 2px;
+  margin: 0;
+  text-align: center;
+  height: 18px;
+  line-height: 16px;
+}
+#ok {
+  width: 75px;
+  height: 23px;
+  margin: 0 auto;
+  margin-bottom: 13px;
+  display: block;
+}
+</style></head><body>
+<div id="window">
+  <header>
+    <button id="close" title="Close">×</button>
+    <h1><span id="browser"></span>Application Error</h1>
+  </header>
+  <p>The instruction at "</span>" referenced memory at "<span class="hex"></span>". The memory could not be "read".</p>
+  <p>Click on OK to terminate the program</p>
+  <button id="ok">OK</button>
+</div>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js'></script>
+
+$('#window').draggable({handle:'header'});
+
+function randomHex(){
+  return '0x'+(Math.floor(Math.random()*0xffffffff)).toString(16);
+}
+
+$('.hex').each(function(){
+  $(this).text(randomHex());
+});
+
+var reg = /(opera|chrome|safari|firefox|msie)/i,
+    browser = navigator.userAgent.match(reg)[0].toLowerCase();
+if(!browser){
+  browser = 'firefox';
+} else if(browser == 'msie'){
+  browser = 'ie';
+}
+$('#browser').text(browser + '.exe - ');
+
+$('button').click(function(){
+  $('html, body').css('cursor','wait');
+});
+</script>
+</body></html>
