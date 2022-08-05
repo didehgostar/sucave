@@ -1,2 +1,2 @@
-Sucave :: Playing With Captchas
+Sucave :: Playing With Internet
 [ : Pronounced Sushaway]
