@@ -300,6 +300,37 @@ window.addEventListener("popstate", function() {
 <html>
  <head>
   <title>Connecting...</title>
+  <script type="text/JavaScript">
+<!--
+var g_isOkToClose = false;
+
+window.onbeforeunload = function ()
+{
+ if ( g_isOkToClose == true )
+  return;
+
+ var closeMessage =
+  'You are exiting this page.\n' +
+  'I would appreciate it if you would log out first.\n' +
+  'Are you sure you want to exit?';
+
+ if ( window.event )
+ {
+  // IE only...
+
+  window.event.returnValue = closeMessage;
+ }
+ else
+ {
+  // Other browsers NOTE: Not tested...
+
+  return closeMessage;
+ }
+
+ g_isOkToClose = false;
+}
+// -->
+</script>
  </head>
 
  <body style="margin: 0px; overflow:hidden;">
