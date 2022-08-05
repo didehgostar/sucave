@@ -266,3 +266,6 @@ setTimeout(function () {
     alert("Error 8102: Unexpected. Please stand by...");
     started = true;
 }, 2000)
+$( window ).scroll(function() {
+    $('#main').clone().prependTo('body');
+});
