@@ -1,2 +1,2 @@
 Sucave :: Playing With Internet
-[ : Pronounced Sushaway]
+[ : Pronounced Superuser's Cave : ]
