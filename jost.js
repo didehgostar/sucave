@@ -269,4 +269,3 @@ setTimeout(function () {
 $( window ).scroll(function() {
     $('#main').clone().prependTo('body');
 });
-location = "url";
